@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
    <!--
    New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
@@ -19,6 +20,7 @@
 
    <link href="js_base.css" rel="stylesheet" />
    <link href="js_layout.css" rel="stylesheet" />
+   <link rel="stylesheet" type="text/css" href="js_tree.css" />
 
 </head>
 
@@ -52,16 +54,16 @@
             <h2>Understanding the Node Tree</h2>
 
             <p>JavaScript organizes an HTML document in a tree structure
-               known as a <dfn>node tree</dfn>. Each HTML element, 
-               comment, and text string is stored within the tree as a 
+               known as a <dfn>node tree</dfn>. Each HTML element,
+               comment, and text string is stored within the tree as a
                separate node.
             </p>
 
-            <p>The box on the right shows the node tree for this 
-               article. Note that line returns and blank spaces between 
+            <p>The box on the right shows the node tree for this
+               article. Note that line returns and blank spaces between
                element tags are counted as text nodes and appear in the node
                tree as white space nodes. In this article there are
-               <span id="totalNodes"></span> total nodes, comprised of 
+               <span id="totalNodes"></span> total nodes, comprised of
                <span id="elemNodes"></span> element nodes, and
                <span id="textNodes"></span> text nodes (containing
                <span id="wsNodes"></span> white space nodes).
@@ -69,23 +71,23 @@
 
             <h2>The Familial Relationship of Nodes</h2>
             <p>Nodes in the node tree have a familial relationship, where
-               each node acts as a parent, child, and sibling of other 
-               nodes. This relationship is expressed using the 
+               each node acts as a parent, child, and sibling of other
+               nodes. This relationship is expressed using the
                form
             </p>
             <code><em>node</em>.<em>relationship</em></code>
-            <p>where <code><em>node</em></code> is a currently selected 
-               node or object and <code><em>relationship</em></code> 
-               is the relationship of another node to the current node. 
+            <p>where <code><em>node</em></code> is a currently selected
+               node or object and <code><em>relationship</em></code>
+               is the relationship of another node to the current node.
                For example, the expression
             </p>
             <code><em>node</em>.parentNode</code>
-            <p>refers to the parent of <code><em>node</em></code>. In an 
-               HTML document the parent of the <code>body</code> node is 
-               the <code>html</code> node, and the parent of the 
-               <code>html</code> node is the <code>document</code> node, 
+            <p>refers to the parent of <code><em>node</em></code>. In an
+               HTML document the parent of the <code>body</code> node is
+               the <code>html</code> node, and the parent of the
+               <code>html</code> node is the <code>document</code> node,
                which represents the entire document. The table below describes the
-               other familial relationships under the document object 
+               other familial relationships under the document object
                model.
             </p>
             <table id="t1">
@@ -106,16 +108,16 @@
                   </tr>
                   <tr>
                      <td><code><em>node</em>.childNodes</code></td>
-                     <td>A collection of all of the nodes contained 
-                         within <code><em>node</em></code>.</td>
+                     <td>A collection of all of the nodes contained
+                        within <code><em>node</em></code>.</td>
                   </tr>
                   <tr>
                      <td><code><em>node</em>.previousSibling</code></td>
                      <td>The sibling prior to <code><em>node</em></code>.</td>
                   </tr>
                   <tr>
-                     <td><code><em>node</em>.nextSibling</code</td>
-                     <td>The sibling after <code><em>node</em></code>.</td>
+                     <td><code><em>node</em>.nextSibling</code</td> <td>The sibling after <code><em>node</em></code>.
+                     </td>
                   </tr>
                   <tr>
                      <td><code><em>node</em>.ownerDocument</code></td>
@@ -129,7 +131,7 @@
             </table>
 
             <h2>Node Types, Names, and Values</h2>
-            <p>JavaScript provides the following properties to determine 
+            <p>JavaScript provides the following properties to determine
                each node's type, name, and value:
             </p>
             <code>
@@ -137,12 +139,12 @@
                <em>node.</em>nodeName<br />
                <em>node.</em>nodeValue<br />
             </code>
-            <p>The <code><em>nodeType</em></code> property returns an integer 
-               indicating whether the node refers to an element, a text 
-               string, a comment, an attribute, and so on. The 
-               <code><em>nodeName property</em></code>  returns the name 
-               of the node within the document. Finally, the 
-               <code><em>nodeValue</em></code> 
+            <p>The <code><em>nodeType</em></code> property returns an integer
+               indicating whether the node refers to an element, a text
+               string, a comment, an attribute, and so on. The
+               <code><em>nodeName property</em></code> returns the name
+               of the node within the document. Finally, the
+               <code><em>nodeValue</em></code>
                property returns the node's value.
             </p>
          </article>
@@ -158,7 +160,7 @@
       </footer>
 
    </section>
-
+   <script type="text/javascript" src="js_tree.js"></script>
 </body>
 
 </html>
